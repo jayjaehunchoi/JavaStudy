@@ -38,18 +38,11 @@ public class MemberController {
     @PostMapping("/signup")
     public ResponseEntity<?> signUp(@RequestBody @Validated MemberDto dto){
         Member member = new Member(dto);
-        try{
-            memberService.join(member);
-        }catch (RuntimeException e){
-            ResponseDto<Object> errorDto = ResponseDto.builder()
-                    .error(e.getMessage())
-                    .build();
-            return new ResponseEntity<>(errorDto, HttpStatus.BAD_REQUEST);
-        }
+        memberService.join(member);
         return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
-    @PostMapping("/signin")
+    @PostMapping("/login")
     public ResponseEntity<?> signIn(@RequestBody @Validated MemberLoginDto dto, HttpServletRequest request){
         Member findMember = memberService.checkLoginInfoCorrect(dto.getName(),dto.getPassword());
         HttpSession session = request.getSession();

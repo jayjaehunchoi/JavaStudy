@@ -50,7 +50,7 @@ public class MemberServiceImpl implements MemberService{
     }
 
     private void saveValidator(Member member){
-        if(findByName(member.getName()) != null){
+        if(memberRepository.findByName(member.getName()) != null){
             throw new DuplicateIdException("중복된 아이디 입니다.");
         }
         if(memberRepository.findByEmail(member.getEmail()) != null){

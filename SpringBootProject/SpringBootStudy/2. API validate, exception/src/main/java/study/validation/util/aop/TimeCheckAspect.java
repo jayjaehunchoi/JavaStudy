@@ -20,8 +20,10 @@ public class TimeCheckAspect {
             result = proceedingJoinPoint.proceed();
             long end = System.currentTimeMillis();
             log.info("[타임 체커 AOP] 소요 시간 {}ms",(end-start));
+        }catch(RuntimeException e){
+            throw e;
         } catch (Throwable throwable) {
-            throwable.printStackTrace();
+            log.error("타임 체커 오류");
         }
         return result;
 
