@@ -1,4 +1,4 @@
-package study.validation.enumeration;
+package study.validation.util.enumeration;
 
 import lombok.Getter;
 

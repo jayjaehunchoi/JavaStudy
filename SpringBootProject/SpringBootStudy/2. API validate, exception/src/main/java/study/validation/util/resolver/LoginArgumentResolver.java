@@ -1,4 +1,4 @@
-package study.validation.resolver;
+package study.validation.util.resolver;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
@@ -6,9 +6,9 @@ import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
-import study.validation.SessionConst;
-import study.validation.annotation.Login;
+import study.validation.util.annotation.Login;
 import study.validation.domain.Member;
+import study.validation.util.constant.SessionConst;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

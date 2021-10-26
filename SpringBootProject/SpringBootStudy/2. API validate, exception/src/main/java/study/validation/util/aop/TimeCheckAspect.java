@@ -1,4 +1,4 @@
-package study.validation.aop;
+package study.validation.util.aop;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class TimeCheckAspect {
 
-    @Around("@annotation(study.validation.annotation.TimeChecker)")
+    @Around("@annotation(study.validation.util.annotation.TimeChecker)")
     public Object timeChecker(ProceedingJoinPoint proceedingJoinPoint){
         Object result = null;
 
@@ -20,8 +20,8 @@ public class TimeCheckAspect {
             result = proceedingJoinPoint.proceed();
             long end = System.currentTimeMillis();
             log.info("[타임 체커 AOP] 소요 시간 {}ms",(end-start));
-        }catch (Throwable throwable){
-            log.error("타임 체커 오류");
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
         }
         return result;
 
