@@ -1,0 +1,175 @@
+/*해바라기 배경 이미지 제거, 화분 배경 이미지 추가 */
+
+#scenePane{
+    -fx-background-image: url("background.png");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1000 600;
+    -fx-background-position: center center;    
+}
+/*식물 관련 버튼*/
+#btn_sun{
+    -fx-background-image: url("sun.png");
+}
+#btn_water{
+    -fx-background-image: url("water.png");
+}
+#btn_heart{
+    -fx-background-image: url("heart.png");
+}
+#btn_snail{
+    -fx-background-image: url("snail.png");
+}
+/*노래 관련 및 도움말 버튼*/
+#btn_play{
+    -fx-background-image: url("play.png");
+    -fx-background-color: transparent;
+}
+#btn_pause{
+    -fx-background-image: url("pause.png");
+    -fx-background-color: transparent;
+}
+#btn_help{
+    -fx-background-image: url("help.png");
+    -fx-background-color: transparent;
+}
+
+/*날씨 정보 및 뒤로가기 버튼 */
+#btn_weather{
+    -fx-background-image: url("weather.png");
+    -fx-background-color: transparent;
+}
+#btn_previouspage{
+    -fx-background-image: url("previouspage.png");
+    -fx-background-color: transparent;
+}
+
+/*확성기 버튼 */
+#btnShowSlide{
+    -fx-background-image: url("loudspeaker.png");
+    -fx-background-color: transparent;    
+}
+
+/*공지사항 */
+#paneslide{
+    -fx-background-color: #F4EBE2;
+    -fx-background-repeat: stretch;     
+}
+#TextArea{
+   	-fx-background: #FFFFFF 0% 0% no-repeat padding-box;
+	-fx-border-color: #E0BFE6;
+	-fx-border-width: 4;
+	-fx-border-radius: 5;
+	-fx-opacity: 1; 
+}
+#TextField{
+   	-fx-background: #FFFFFF 0% 0% no-repeat padding-box;
+	-fx-border-color: #E0BFE6;
+	-fx-border-width: 4;
+	-fx-border-radius: 5;
+	-fx-opacity: 1; 
+}
+#btn_enter{
+    -fx-background-color: #E0BFE6; 
+   	-fx-border-width: 4;
+	-fx-border-radius: 5;
+	-fx-opacity: 1;
+}
+#btnHideSlide{
+    -fx-background-image: url("home.png");
+    -fx-background-color: transparent;    
+}
+#btn_serverOn{
+    -fx-background-image: url("on.png");
+    -fx-text-fill: transparent;
+    -fx-background-color: transparent;    
+} 
+#btn_serverOff{
+    -fx-background-image: url("off.png");
+    -fx-text-fill: transparent;
+    -fx-background-color: transparent;    
+} 
+
+/*도움말 페이지 내 버튼 */
+#btn_helpPrev{
+	-fx-background-image: url("helpBtn_1.png");
+    -fx-background-color: transparent;  
+}
+#btn_helpPrev1{
+	-fx-background-image: url("helpBtn_1.png");
+    -fx-background-color: transparent;  
+}
+#btn_helpPrev2{
+	-fx-background-image: url("helpBtn_1.png");
+    -fx-background-color: transparent;  
+}
+#btn_helpPrev3{
+	-fx-background-image: url("helpBtn_1.png");
+    -fx-background-color: transparent;  
+}
+#btn_helpPrev4{
+	-fx-background-image: url("helpBtn_1.png");
+    -fx-background-color: transparent;  
+}
+#btn_helpNxt2{
+	-fx-background-image: url("helpBtn_2.png");
+    -fx-background-color: transparent;  
+}
+#btn_helpNxt3{
+	-fx-background-image: url("helpBtn_2.png");
+    -fx-background-color: transparent;  
+}
+
+#btn_helpNxt4{
+	-fx-background-image: url("helpBtn_2.png");
+    -fx-background-color: transparent;  
+}
+
+#btn_helpNxt5{
+	-fx-background-image: url("helpBtn_2.png");
+    -fx-background-color: transparent;  
+}
+
+#btn_helpNxt6{
+	-fx-background-image: url("helpBtn_2.png");
+    -fx-background-color: transparent;  
+}
+
+#panehelp{
+	-fx-background-image: url("help_1.png");
+	-fx-background-size: stretch;
+    -fx-background-color: transparent;  
+}
+/*호버~ */
+#btn_sun:hover{
+    -fx-background-image: url("sun_1.png");
+}
+
+#btn_water:hover{
+    -fx-background-image: url("water_1.png");
+}
+#btn_heart:hover{
+    -fx-background-image: url("heart_1.png");
+}
+#btn_snail:hover{
+    -fx-background-image: url("snail_1.png");
+}
+#btn_play:hover{
+    -fx-background-image: url("play_1.png");
+    -fx-background-color: transparent;
+}
+#btn_pause:hover{
+    -fx-background-image: url("pause_1.png");
+    -fx-background-color: transparent;
+}
+
+#btn_weather:hover{
+    -fx-background-image: url("weather_1.png");
+    -fx-background-color: transparent;
+}
+#btn_previouspage:hover{
+    -fx-background-image: url("previouspage_1.png");
+    -fx-background-color: transparent;
+}
+
+
+
