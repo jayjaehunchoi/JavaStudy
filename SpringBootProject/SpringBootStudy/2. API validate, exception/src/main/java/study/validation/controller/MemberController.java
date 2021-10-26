@@ -4,23 +4,27 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import study.validation.annotation.Login;
-import study.validation.annotation.TimeChecker;
+import study.validation.util.annotation.Login;
+import study.validation.util.annotation.TimeChecker;
 import study.validation.domain.Member;
 import study.validation.dto.MemberDto;
 import study.validation.domain.MemberService;
 import study.validation.dto.MemberLoginDto;
 import study.validation.dto.ResponseDto;
+import study.validation.util.exception.DuplicateEmailException;
+import study.validation.util.exception.DuplicateIdException;
+import study.validation.util.exception.LoginFailedException;
 
+import javax.security.auth.login.LoginException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static study.validation.SessionConst.SESSION_ID;
+import static study.validation.util.constant.SessionConst.SESSION_ID;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -33,28 +37,24 @@ public class MemberController {
     @TimeChecker
     @PostMapping("/signup")
     public ResponseEntity<?> signUp(@RequestBody @Validated MemberDto dto){
-
-        Member member = Member.builder()
-                        .name(dto.getName())
-                        .password(dto.getPassword())
-                        .age(dto.getAge())
-                        .email(dto.getEmail())
-                        .build();
-        memberService.save(member);
-
+        Member member = new Member(dto);
+        try{
+            memberService.join(member);
+        }catch (RuntimeException e){
+            ResponseDto<Object> errorDto = ResponseDto.builder()
+                    .error(e.getMessage())
+                    .build();
+            return new ResponseEntity<>(errorDto, HttpStatus.BAD_REQUEST);
+        }
         return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
     @PostMapping("/signin")
-    public ResponseEntity<?> signIn(@RequestBody MemberLoginDto dto, HttpServletRequest request){
-        Member findMember = memberService.findByIdAndPassword(dto.getName(), dto.getPassword());
-        if(findMember == null){
-            ResponseDto<Object> responseDto = ResponseDto.builder().error("Sign in failed").build();
-            return ResponseEntity.badRequest().body(responseDto);
-        }
+    public ResponseEntity<?> signIn(@RequestBody @Validated MemberLoginDto dto, HttpServletRequest request){
+        Member findMember = memberService.checkLoginInfoCorrect(dto.getName(),dto.getPassword());
         HttpSession session = request.getSession();
         session.setAttribute(SESSION_ID,findMember);
-        MemberDto memberDto = createSingleMemberDto(findMember);
+        MemberDto memberDto = new MemberDto(findMember);
         return new ResponseEntity<>(memberDto, HttpStatus.OK);
     }
 
@@ -74,8 +74,9 @@ public class MemberController {
     }
 
     @GetMapping("/error")
-    public String error(){
-        return "로그인 하세요";
+    public ResponseEntity<?> error(){
+        ResponseDto<Object> responseDto = ResponseDto.builder().error("로그인 하세요").build();
+        return ResponseEntity.badRequest().body(responseDto);
     }
 
     @GetMapping("/my")
@@ -84,22 +85,12 @@ public class MemberController {
             ResponseDto<Object> responseDto = ResponseDto.builder().error("로그인 하세요").build();
             return ResponseEntity.badRequest().body(responseDto);
         }
-        MemberDto memberDto = createSingleMemberDto(member);
+        MemberDto memberDto = new MemberDto(member);
         return new ResponseEntity<>(memberDto, HttpStatus.OK);
     }
     private ResponseDto createAllMembersDto(List<Member> members) {
         List<MemberDto> responseDto = members.stream().map(MemberDto::new).collect(Collectors.toList());
         return ResponseDto.<MemberDto>builder().data(responseDto).build();
-    }
-
-    private MemberDto createSingleMemberDto(Member findMember) {
-        MemberDto memberDto = MemberDto.builder()
-                .name(findMember.getName())
-                .password(findMember.getPassword())
-                .age(findMember.getAge())
-                .email(findMember.getEmail())
-                .build();
-        return memberDto;
     }
 
 }

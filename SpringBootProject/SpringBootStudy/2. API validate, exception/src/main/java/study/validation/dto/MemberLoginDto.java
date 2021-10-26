@@ -19,7 +19,6 @@ public class MemberLoginDto {
     private String name;
 
     @NotBlank(message = "비밀번호를 입력하세요")
-    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[~!@#$%^&*()+|=])[A-Za-z\\d~!@#$%^&*()+|=]{8,16}$", message = "숫자, 문자 , 특수문자를 포함한 8 ~ 16자 비밀번호를 입력하세요")
     private String password;
 
     public MemberLoginDto(final Member member) {
