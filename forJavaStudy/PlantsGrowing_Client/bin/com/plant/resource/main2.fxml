@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.main.Controller.Controller2">
+   <children>
+      <Button fx:id="btn_water" layoutX="795.0" layoutY="192.0" mnemonicParsing="false" onAction="#waterAction" prefHeight="155.0" prefWidth="155.0" />
+      <Button fx:id="btn_sun" layoutX="624.0" layoutY="192.0" mnemonicParsing="false" onAction="#lightAction" prefHeight="155.0" prefWidth="155.0" />
+      <Button fx:id="btn_heart" layoutX="624.0" layoutY="361.0" mnemonicParsing="false" onAction="#loveAction" prefHeight="155.0" prefWidth="155.0" />
+      <Button fx:id="btn_snail" layoutX="796.0" layoutY="361.0" mnemonicParsing="false" onAction="#snailAction" prefHeight="155.0" prefWidth="155.0" />
+      <ImageView fx:id="myPlantView" fitHeight="554.0" fitWidth="377.0" layoutX="176.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@css/sf1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chatBubbleView" fitHeight="83.0" fitWidth="83.0" layoutX="487.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="waterEffect" fitHeight="299.0" fitWidth="282.0" layoutX="205.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="lightEffect" fitHeight="281.0" fitWidth="335.0" layoutX="178.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="loveEffect" fitHeight="350.0" fitWidth="450.0" layoutX="140.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="snailEffect" fitHeight="83.0" fitWidth="111.0" layoutX="345.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btn_weather" layoutX="19.0" layoutY="364.0" mnemonicParsing="false" onAction="#weatherAction" prefHeight="81.0" prefWidth="81.0" />
+      <Button fx:id="btn_previouspage" layoutX="19.0" layoutY="475.0" mnemonicParsing="false" onAction="#goPrevious" prefHeight="81.0" prefWidth="81.0" />
+      <Button fx:id="btn_play" layoutX="639.0" layoutY="83.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="77.0" prefWidth="74.0" />
+      <Button fx:id="btn_pause" layoutX="750.0" layoutY="81.0" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="77.0" prefWidth="74.0" />
+      <Button fx:id="btn_help" layoutX="865.0" layoutY="83.0" mnemonicParsing="false" onAction="#helpAction" prefHeight="77.0" prefWidth="74.0" />
+      <Label fx:id="lbl_plantName" layoutX="477.0" layoutY="335.0" text="a plant name" />
+      <Label fx:id="lbl_wthr_location" layoutX="46.0" layoutY="242.0" text="location" />
+      <Label fx:id="lbl_wthr_temperature" layoutX="46.0" layoutY="286.0" text="temperature" />
+      <Label fx:id="lbl_wthr_status" layoutX="46.0" layoutY="330.0" text="status" />
+      <Button fx:id="btnShowSlide" layoutX="939.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#showSlide" prefHeight="47.0" prefWidth="47.0" text="" />
+      <AnchorPane fx:id="paneslide" layoutX="537.0" prefHeight="600.0" prefWidth="463.0">
+         <children>
+            <Button fx:id="btnHideSlide" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#hideSlide" prefHeight="52.0" prefWidth="52.0" text="" />
+            <TextArea fx:id="TextArea" layoutX="18.0" layoutY="83.0" prefHeight="435.0" prefWidth="428.0" />
+            <TextField fx:id="TextField" layoutX="18.0" layoutY="540.0" prefHeight="39.0" prefWidth="365.0" />
+            <Button fx:id="btn_enter" layoutX="393.0" layoutY="540.0" mnemonicParsing="false" onAction="#chatAction" prefHeight="39.0" prefWidth="53.0" text="OK" />
+            <Button fx:id="btn_serverOff" layoutX="394.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#serverOff" prefHeight="52.0" prefWidth="52.0" text="off" />
+            <Button fx:id="btn_serverOn" layoutX="394.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#serverOn" prefHeight="52.0" prefWidth="52.0" text="on" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panehelp" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <ImageView fx:id="helpView" fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btn_helpNxt6" layoutX="930.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpTo6Action" prefHeight="40.0" prefWidth="40.0" text="" />
+            <Button fx:id="btn_helpNxt5" layoutX="930.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpTo5Action" prefHeight="40.0" prefWidth="40.0" text="" />
+            <Button fx:id="btn_helpNxt4" layoutX="930.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpTo4Action" prefHeight="40.0" prefWidth="40.0" text="" />
+            <Button fx:id="btn_helpNxt3" layoutX="930.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpTo3Action" prefHeight="40.0" prefWidth="40.0" text="" />
+            <Button fx:id="btn_helpNxt2" layoutX="930.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpTo2Action" prefHeight="40.0" prefWidth="40.0" text="" />
+            <Button fx:id="btn_helpPrev" layoutX="870.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpPrev" prefHeight="40.0" prefWidth="40.0" text="" />
+            <Button fx:id="btn_helpPrev1" layoutX="870.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpTo1Prev" prefHeight="40.0" prefWidth="40.0" text="" />
+            <Button fx:id="btn_helpPrev2" layoutX="870.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpTo2Prev" prefHeight="40.0" prefWidth="40.0" text="" />
+            <Button fx:id="btn_helpPrev3" layoutX="870.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpTo3Prev" prefHeight="40.0" prefWidth="40.0" text="" />
+            <Button fx:id="btn_helpPrev4" layoutX="870.0" layoutY="20.0" mnemonicParsing="false" onAction="#helpTo4Prev" prefHeight="40.0" prefWidth="40.0" text="" />
+         </children></AnchorPane>
+    
+   </children>
+</AnchorPane>

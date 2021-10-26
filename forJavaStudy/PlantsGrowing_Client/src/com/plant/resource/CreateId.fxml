@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.firstLogin.Controller.LoginController">
+   <children>
+      <ImageView fitHeight="81.0" fitWidth="81.0" layoutX="260.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/plant.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="234.0" layoutY="118.0" prefHeight="32.0" prefWidth="147.0" text="Create New ID">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="183.0" prefHeight="32.0" prefWidth="91.0" text="User Name">
+         <font>
+            <Font name="Consolas" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="222.0" prefHeight="32.0" prefWidth="91.0" text="PassWord">
+         <font>
+            <Font name="Consolas" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfd_create_ID" layoutX="193.0" layoutY="184.0" prefHeight="32.0" prefWidth="272.0" promptText="UserName" />
+      <PasswordField fx:id="tfd_createPw" layoutX="193.0" layoutY="222.0" prefHeight="32.0" prefWidth="272.0" promptText="Password" />
+      <Button fx:id="btn" layoutX="193.0" layoutY="314.0" mnemonicParsing="false" onAction="#createDone" prefHeight="32.0" prefWidth="272.0" style="-fx-background-color: #81c147;" text="Create" textFill="#fffefe">
+         <font>
+            <Font name="Consolas" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="473.0" layoutY="184.0" mnemonicParsing="false" onAction="#checkID" prefHeight="32.0" prefWidth="81.0" style="-fx-background-color: #81c147;" text="Check ID" textFill="#fffefe">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="50.0" layoutY="264.0" prefHeight="32.0" prefWidth="140.0" text="Check PassWord">
+         <font>
+            <Font name="Consolas" size="17.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tfd_createPw2" layoutX="193.0" layoutY="264.0" prefHeight="32.0" prefWidth="272.0" promptText="Password" />
+   </children>
+</AnchorPane>
