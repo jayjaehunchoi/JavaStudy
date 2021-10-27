@@ -10,10 +10,10 @@
 starter를 이용하여 일반적으로 세팅되는 build는 제외하고, ```Querydsl```을 사용하기 위한 코드만 작성해본다.
 ```groovy
 plugins{
-	id "com.ewerk.gradle.plugins.querydsl" version "1.1.3" // docs 확인 결과 1.1.3이 가장 최신 버전으로 확인 됨.
+	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10" // docs 확인 결과 1.1.3이 가장 최신 버전으로 확인 됨.
 }
 dependencies{
-	implementation 'org.querydsl:querydsl-jpa'
+	implementation 'com.querydsl:querydsl-jpa'
 }
 
 def querydslDir = "$buildDir/gernerated/querydsl" // 해당 경로에 querydsl 폴더 생성
