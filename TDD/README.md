@@ -6,3 +6,4 @@
 4. Day 4 : **[대역](https://github.com/jayjaehunchoi/JavaStudy/blob/main/TDD/Day4/%EB%8C%80%EC%97%AD%20.md)**
 5. Day 5 : **[Mock](https://github.com/jayjaehunchoi/JavaStudy/blob/main/TDD/Day5/mock.md)**
 6. Day 6 : **[대역2](https://github.com/jayjaehunchoi/JavaStudy/blob/main/TDD/Day6/%EB%8C%80%EC%97%AD%20.md)**
+7. Day 7 : **[대역으로 Controller Test 하기](https://github.com/jayjaehunchoi/JavaStudy/blob/main/TDD/Day7/%EB%8C%80%EC%97%AD%EC%9C%BC%EB%A1%9C%20Controller%20Test%ED%95%98%EA%B8%B0.md)**
