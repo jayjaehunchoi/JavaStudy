@@ -29,20 +29,20 @@ public class BoardRepositoryImpl implements BoardRepositoryCustom{
 	}
 	public Page<MemberBoardDto> search(BoardSearchCondition condition, Pageable pageable){
 		QueryResults<MemberBoardDto> results = queryFactory.select(new MemberBoardDto(
-																member.id.as("memberId"),
-																member.name,
-																board.id.as("boardId"),
-																board.title,
-																board.content))
-														.from(board)
-														.leftJoin(board.member, member)
-														.where(memberNameEq(condition.getName()),
-																regionEq(condition.getRegion()),
-																likesGoe(condition.getLikes()))
-														.orderBy(board.id.desc())
-														.offset(pageable.getOffset())
-														.limit(pageable.getPageSize())
-														.fetchResults(); // count 쿼리가 함께 나감
+									member.id.as("memberId"),
+									member.name,
+									board.id.as("boardId"),
+									board.title,
+									board.content))
+							.from(board)
+							.leftJoin(board.member, member)
+							.where(memberNameEq(condition.getName()),
+									regionEq(condition.getRegion()),
+									likesGoe(condition.getLikes()))
+							.orderBy(board.id.desc())
+							.offset(pageable.getOffset())
+							.limit(pageable.getPageSize())
+							.fetchResults(); // count 쿼리가 함께 나감
 		List<MemberBoardDto> contents = results.getResults();
 		long count = results.getTotal();
 		return new PageImpl<>(content, pageable, count);
