@@ -35,3 +35,4 @@
 6. [SpringSecurity속 Swagger setting하기](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EA%B0%9C%EB%85%90/SpringSecurity%EC%86%8D%20%20Swagger%20setting%ED%95%98%EA%B8%B0.md) : Spring Security가 걸려있을 때, Swagger를 어떻게 작동시키는가
 7. [controller에서 validate하지 않기](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EA%B0%9C%EB%85%90/controller%EC%97%90%EC%84%9C%20validate%ED%95%98%EC%A7%80%20%EC%95%8A%EA%B8%B0.md) : Spring framwork의 Validator를 이용하여 비즈니스 요구사항에 따라 복잡하게 엉켜있는 data 로직 검증하기
 8. [에러 핸들링](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EA%B0%9C%EB%85%90/%EC%97%90%EB%9F%AC%20%ED%95%B8%EB%93%A4%EB%A7%81.md) : 일반 컨트롤러에서 ```exception handler```의 작동 원리와 api에서 예외 핸들링하기.
+9. [Spring Security](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EA%B0%9C%EB%85%90/Spring%20Security.md) : Spring Security Reference를 읽고 필요한 내용을 골라 정리한 포스팅
