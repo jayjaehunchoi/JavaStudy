@@ -38,3 +38,4 @@
 9. [Spring Security](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EA%B0%9C%EB%85%90/Spring%20Security.md) : Spring Security Reference를 읽고 필요한 내용을 골라 정리한 포스팅
 10. [Spring REST docs 적용](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EA%B0%9C%EB%85%90/Spring%20Rest%20doc%20%EC%A0%81%EC%9A%A9.md) : 직접 Swagger와 REST docs를 적용해보며 느낀 경험과, REST docs를 적용할 수 있는 간단 예제 
 11. [운영 db와 test db의 분리](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EA%B0%9C%EB%85%90/%EC%9A%B4%EC%98%81%20db%20%2C%20test%20db%EC%9D%98%20%EB%B6%84%EB%A6%AC.md) : EC2에 배포하고 운영 db에서 test가 돌아가는 것을 경험한 뒤 trouble shooting한 내용 소개!
+12. [REST API XSS 방지](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EA%B0%9C%EB%85%90/REST%20API%20XSS%20%EB%B0%A9%EC%A7%80.md): MessageConverter에 HtmlEscape를 세팅하고, JacksonCoverter에 추가하여 사용하기
