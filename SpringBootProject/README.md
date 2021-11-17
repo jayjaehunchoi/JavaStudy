@@ -42,3 +42,4 @@
 
 ## 배포
 1. [Docker와 AWS EB로 배포하기(1)](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EB%B0%B0%ED%8F%AC/Docker%EC%99%80%20AWS%20EB%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0(1).md) : AWS EB, Docker에 부딪히고 삽질하며 배포해보자. EB와 RDS 생성하고 보안그룹 등록한 뒤 EB, RDS 연결하기
+2. [Docker, Jenkins를 이용하여 배포하기](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EB%B0%B0%ED%8F%AC/Docker%2CJenkins%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0.md) : Docker, Jenkins에 부딪히고 삽질하며 배포해보자. Docker hub에 server image를 push 하고 Jenkins로 ```docker run -p 8080:8080 wogns0108/spring-server``` 하기
