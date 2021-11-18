@@ -156,7 +156,7 @@ pipeline {
 
 
 ## 현재 구조
-![image](https://user-images.githubusercontent.com/87312401/142384246-0a8e5e7f-3cfd-456a-a414-3e6d53db629b.png)
+![image](https://user-images.githubusercontent.com/87312401/142388826-4ff5f724-97e7-4e33-9bde-356e0d16e56c.png)
 
 #### 문제점
 현재와 같이 빌드와 배포를 하나의 인스턴스에서 진행하다보니 생각보다 많은 메모리를 차지하고 서버의 성능이 나올까 걱정된다. 또, github에 push 하지 않는 개인정보가 담긴 ```properties```들을 어떻게 jenkins로 함께 빌드시켜야 할 지 모르겠다. 굳이 ```pipeLine```을 고집하지 말고 docker hub에 미리 빌드한 이미지를 올린 뒤 jenkins에서 실행시키고, git hook을 포기하거나, 빌드 서버를 분리해서 배포 서버로 jar파일을 던져주는 방식으로 진행하면 좋을 듯하다.
