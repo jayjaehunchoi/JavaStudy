@@ -24,7 +24,7 @@ ENTRYPOINT ["jara", "-jar", "/app.jar"] # jar 파일 실행
 > terminal 에서 다음 명령어를 입력해준다. 루트 폴더의 Dockerfile을 기반으로 docker 이미지가 생성된다.
 ```
 ./gradlew clean build # build하고 jar파일 생성
-docker build -f wogns0108/spring-server . # 이미지 생성
+docker build -t wogns0108/spring-server . # 이미지 생성
 ```
 > 이후 dockerhub에 push 해준다 . (```docker login```으로 로그인 해준 뒤)
 ```
