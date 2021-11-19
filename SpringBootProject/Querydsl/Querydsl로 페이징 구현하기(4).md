@@ -11,7 +11,7 @@ queryFactory.select(post.id)
 		  regionEq(condition.getRegion()),  
 		  titleContain(condition.getTitle()))
 		 .orderBy(post.id.desc())  
-		.offset(pageNo-1)  
+		.offset((pageNo-1)*pageSize)  
 		.limit(pageSize)  
 		.fetch();
 ```
