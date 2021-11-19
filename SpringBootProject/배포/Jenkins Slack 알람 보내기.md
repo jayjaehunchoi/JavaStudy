@@ -45,8 +45,8 @@ post {
 ```
 
 이렇게 ```pipeLine```에 명령어를 작성하고 ```readme``` 를 바꿔 push 해본다.
-![image](https://user-images.githubusercontent.com/87312401/142584135-df079400-0e59-435b-b076-670de14aea0c.png)
-![image](https://user-images.githubusercontent.com/87312401/142584163-cd615bf6-9ed3-4003-b4d8-011311f2cb1f.png)
+![image](https://user-images.githubusercontent.com/87312401/142645079-0eff5bad-6a8c-44ac-a353-7b8bdbf1305b.png)
+![image](https://user-images.githubusercontent.com/87312401/142645125-32764b92-9278-4275-af47-710f1554cd67.png)
 
 그러면 알림이 친절하게 나가는 것을 확인할 수 있다!!
 
