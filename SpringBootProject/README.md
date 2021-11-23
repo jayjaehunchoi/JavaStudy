@@ -1,4 +1,4 @@
-# Spring Boot Study
+# Spring Boot Project
 > Spring Boot Project를 진행하며 경험한 issue를 해결하며 체득, 학습한 내용 모든 것을 정리하는 공간.
 
 ## JPA
@@ -46,3 +46,4 @@
 2. [Docker, Jenkins를 이용하여 배포하기](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EB%B0%B0%ED%8F%AC/Docker%2CJenkins%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0.md) : Docker, Jenkins에 부딪히고 삽질하며 배포해보자. Docker hub에 server image를 push 하고 Jenkins로 ```docker run -p 8080:8080 wogns0108/spring-server``` 하기
 3. [Docker, Jenkins를 이용하여 EC2에 배포, 회고](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EB%B0%B0%ED%8F%AC/Docker%2CJenkins%2CEC2%20%EB%B0%B0%ED%8F%AC%EC%A0%95%EB%A6%AC%2C%20%ED%9A%8C%EA%B3%A0.md) : 빌드와 배포는 한 서버에서 하지말자 . 메모.....
 4. [Jenkins 슬랙 알람 보내기](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EB%B0%B0%ED%8F%AC/Jenkins%20Slack%20%EC%95%8C%EB%9E%8C%20%EB%B3%B4%EB%82%B4%EA%B8%B0.md) : CI/CD의 완성 Jenkins 빌드 알람을 슬랙에서 받아보자
+5. [Jenkins Webhook customizing](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/%EB%B0%B0%ED%8F%AC/Jenkins%20web%20hook%20customizing.md) : 데브옵스 담당이 푸시했을때만 빌드하기
