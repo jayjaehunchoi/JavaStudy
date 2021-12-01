@@ -46,7 +46,7 @@ void update(){
 ```
 > 메서드 종료 후 flush를 확인하기 위해 Rollback 옵션을 꺼두자.
 
-콘솔에 출력되는 로그를 확인해보자
+콘솔에 출력되는 로그를 확인해보자  
 ![image](https://user-images.githubusercontent.com/87312401/144169173-28e0ba73-d37b-46c3-a9e4-b894bbee0f8f.png)
 
 이렇게 쿼리가 발생하는 이유를 알기 위해 ```flushMode.AUTO```의 설정을 알아야 한다.
