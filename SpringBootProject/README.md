@@ -11,6 +11,7 @@
 2. [interceptor](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/Login/interceptor.md) : ```Login``` 시리즈 2, 예외, 인증 위치를 선택할 수 있다는 점에서의 편리함 발견
 3. [사용할 수 있는 annotation 만들기](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/Login/%EC%82%AC%EC%9A%A9%ED%95%A0%20%EC%88%98%20%EC%9E%88%EB%8A%94%20annotation%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md) : ```argumentresolver```를 이용하여 사용할 수 있는 ```annoatation```을 만들어 session 로그인 값을 편하게 받아올 수 있음
 4. [JWT 전환기](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/Login/JWT%20%EC%A0%84%ED%99%98%EA%B8%B0.md): Session 로그인에서 JWT로 전환하면서 느끼고 배운 것
+5. [소셜로그인 구현](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/Login/%EC%86%8C%EC%85%9C%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EA%B5%AC%ED%98%84.md) : 카카오 소셜로그인 구현해보기
 
 ## Querydsl
 1. [Querydsl로 페이징 구현하기(1)](https://github.com/jayjaehunchoi/JavaStudy/blob/main/SpringBootProject/Querydsl/Querydsl%EB%A1%9C%20%ED%8E%98%EC%9D%B4%EC%A7%95%20%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0(1).md) : 순수 jpa로 ```query```를 작성해보고, ```querydsl```로 전환하면 얼마나 편리한지 확인
